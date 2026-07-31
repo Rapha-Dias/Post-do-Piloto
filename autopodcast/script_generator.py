@@ -296,13 +296,21 @@ Retorne estritamente um objeto JSON com a seguinte estrutura:
     if api_key:
         try:
             print(f"[+] Gerando roteiro extenso com QUIZ para '{target_prefix}' via Gemini AI...")
-            client = genai.Client(api_key=api_key)
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=f"{prompt_rules}\n\nAqui estão as matérias e fontes de estudo:\n{formatted_news}",
-                config={"response_mime_type": "application/json"}
-            )
-            raw_text = response.text.strip() if response.text else ""
+            raw_text = None
+            for target_model in ["gemini-flash-latest", "gemini-3.5-flash", "gemini-2.0-flash"]:
+                try:
+                    response = client.models.generate_content(
+                        model=target_model,
+                        contents=f"{prompt_rules}\n\nAqui estão as matérias e fontes de estudo:\n{formatted_news}",
+                        config={"response_mime_type": "application/json"}
+                    )
+                    if response and response.text:
+                        raw_text = response.text.strip()
+                        print(f"[OK] Roteiro gerado com modelo: {target_model}")
+                        break
+                except Exception as m_err:
+                    print(f"[!] Modelo '{target_model}' não disponível para esta chave: {m_err}. Tentando próximo modelo...")
+                    continue
             if raw_text.startswith("```"):
                 raw_text = re.sub(r'^```(?:json)?\s*', '', raw_text, flags=re.IGNORECASE)
                 raw_text = re.sub(r'\s*```$', '', raw_text)

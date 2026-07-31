@@ -463,7 +463,7 @@
         </main>
 
         <footer>
-            <p id="footer-text">© 2026 Meu Podcast • Desenvolvido com Python &amp; GitHub Actions</p>
+            <p id="footer-text">© 2026 Curso Básico de Piloto Privado (PPA) • Criado por <strong style="color: #38bdf8;">Raphael Dias</strong> • Desenvolvido com Python &amp; GitHub Actions</p>
         </footer>
     </div>
 
@@ -637,7 +637,7 @@
                         document.getElementById('header-podcast-title').innerText = cfg.podcast.title;
                         document.getElementById('header-tagline').innerText = cfg.podcast.tagline;
                         document.getElementById('header-description').innerText = cfg.podcast.description;
-                        document.getElementById('footer-text').innerText = `© 2026 ${cfg.podcast.title} • Desenvolvido com Python & GitHub Actions`;
+                        document.getElementById('footer-text').innerHTML = `© 2026 ${cfg.podcast.title} • Criado por <strong style="color: #38bdf8;">Raphael Dias</strong> • Desenvolvido com Python &amp; GitHub Actions`;
                         if (cfg.podcast.link) document.getElementById('repo-link').href = cfg.podcast.link;
                         if (cfg.podcast.spotify_link) document.getElementById('spotify-link').href = cfg.podcast.spotify_link;
                     }

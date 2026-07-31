@@ -15,6 +15,25 @@
     <itunes:image href="https://rapha-dias.github.io/Post-do-Piloto/cover.jpg" />
     <itunes:category text="Education" />
     <item>
+      <title>EP04 Conhecimentos Técnicos: Motor 4 Tempos, Ignição por Magnetos e Instrumentos do Painel</title>
+      <description>🎙️ SOBRE ESTE EPISÓDIO:
+Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Fernanda e o aluno Cadu abordam os tópicos essenciais de Conhecimentos Técnicos e realizam um Quiz da Banca ANAC com 3 perguntas explicadas passo a passo. Feito para pilotos iniciantes e entusiastas da aviação!
+
+⏱️ CAPÍTULOS E MARCAS DE TEMPO:
+• 00:00 - Cap 01: Intro
+
+🔗 FONTES CITADAS E LINKS RECOMENDADOS:
+• Canal Piloto - Materiais para Estudo de Aviação: https://canalpiloto.com.br/materiais-para-estudo-de-aviacao-download/
+• Guia Didático Piloto Privado: https://pt.scribd.com/document/974659764/Guia-Piloto-Privado-de-Aviao-Parte-2-Material-Didatico
+</description>
+      <itunes:summary>Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Fernanda e o aluno Cadu abordam os tópicos essenciais de Conhecimentos Técnicos e realizam um Quiz da Banca ANAC com 3 perguntas explicadas passo a passo. Feito para pilotos iniciantes e entusiastas da aviação!</itunes:summary>
+      <itunes:explicit>no</itunes:explicit>
+      <guid>podcast-ep004-20260731</guid>
+      <pubDate>Fri, 31 Jul 2026 01:23:11 +0000</pubDate>
+      <itunes:duration>00:06:21</itunes:duration>
+      <enclosure url="https://rapha-dias.github.io/Post-do-Piloto/episodes/ep04_audio.mp3" length="2286432" type="audio/mpeg" />
+    </item>
+    <item>
       <title>EP03 Regulamentos de Tráfego Aéreo: As Regras do Céu, Mínimos VFR, Circuito de Tráfego e Fraseologia</title>
       <description>🎙️ SOBRE ESTE EPISÓDIO:
 Um guia completo e aprofundado sobre Regulamentos de Tráfego Aéreo para o aluno de Piloto Privado (PPA). Abordamos as regras de voo visual (VFR), classificação dos espaços aéreos de A a G, entrada no circuito de tráfego, prioridades de passagem e fraseologia padrão de radiocomunicação, finalizando com um simulado da banca da ANAC.

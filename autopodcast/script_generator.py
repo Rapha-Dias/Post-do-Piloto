@@ -296,6 +296,7 @@ Retorne estritamente um objeto JSON com a seguinte estrutura:
     if api_key:
         try:
             print(f"[+] Gerando roteiro extenso com QUIZ para '{target_prefix}' via Gemini AI...")
+            client = genai.Client(api_key=api_key)
             raw_text = None
             for target_model in ["gemini-flash-latest", "gemini-3.5-flash", "gemini-2.0-flash"]:
                 try:

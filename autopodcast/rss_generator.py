@@ -97,10 +97,11 @@ def add_new_episode(title, summary, script_text, audio_url, chapters, sources, a
     for src_name, src_url in sources:
         show_notes += f"• {src_name}: {src_url}\n"
         
+    final_title = title if re.match(r'^EP\d+', title, flags=re.IGNORECASE) else f"Ep {ep_num:02d}: {title}"
     new_ep = {
         "id": ep_num,
         "guid": guid,
-        "title": f"Ep {ep_num:02d}: {title}",
+        "title": final_title,
         "summary": summary,
         "description": show_notes,
         "audio_url": audio_url,

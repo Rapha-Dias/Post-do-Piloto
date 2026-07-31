@@ -1,48 +1,44 @@
 {
   "podcast": {
-    "title": "Meu Podcast de TI & Tecnologia",
-    "tagline": "Tudo sobre Programação, IA & Inovação Descomplicada",
-    "description": "O podcast diário que traduz o 'tecniquês' em conversas leves sobre tecnologia, desenvolvimento e inovação para todos os públicos.",
-    "author": "Seu Nome / Seus Apresentadores",
-    "email": "seu-email@exemplo.com",
-    "link": "https://seu-usuario.github.io/seu-repositorio",
-    "category": "Technology",
+    "title": "Curso Básico de Piloto Privado (PPA)",
+    "tagline": "Um episódio por dia cobrindo a Teoria da ANAC, Manutenção e Dicas Práticas de Voo",
+    "description": "O podcast diário automatizado com Inteligência Artificial e vozes neurais criado especialmente para ajudar pilotos iniciantes no curso de Piloto Privado (PPA) e entusiastas apaixonados pela aviação. Cada dia da semana aborda uma matéria essencial: Teoria de Voo, Meteorologia, Regulamentos, Conhecimentos Técnicos, Navegação, Manutenção (MMA) e Resumo da Semana com a Comandante Fernanda e seu aluno Cadu.",
+    "author": "Cmte. Fernanda & Aluno Cadu",
+    "email": "contato@canalpiloto.com.br",
+    "link": "https://rapha-dias.github.io/Post-do-Piloto",
+    "category": "Education",
     "language": "pt-br",
     "schedule_time_brt": "07:00 da manhã"
   },
   "hosts": {
     "host_1": {
-      "name": "Tico",
+      "name": "Cadu",
       "voice": "pt-BR-AntonioNeural",
-      "role": "O estudante curioso. Faz perguntas de leigo e representa quem está aprendendo do zero.",
+      "role": "O Aluno Piloto Privado (PPA). Curioso e compenetrado, traz as dúvidas reais de quem está estudando para a banca da ANAC e se preparando para as horas de voo.",
       "gender": "male"
     },
     "host_2": {
-      "name": "Tech",
+      "name": "Cmte. Fernanda",
       "voice": "pt-BR-FranciscaNeural",
-      "role": "A especialista. Explica os conceitos com analogias práticas e dicas reais de código.",
+      "role": "A Comandante e Instrutora de Voo Experiente (INVA). Piloto veterana com milhas de voo, ensina Teoria de Voo, Meteorologia, Navegação, Regulamentos e Conhecimentos Técnicos com grande autoridade, didática e paixão pela aviação.",
       "gender": "female"
     },
     "mascot": {
-      "name": "Robô de IA",
-      "role": "O assistente virtual que busca notícias em tempo real e apoia na produção."
+      "name": "Robô de Voo IA",
+      "role": "O copiloto digital que coleta Notams, boletins meteorológicos METAR e atualizações do setor aeronáutico."
     }
   },
   "feeds": [
     {
-      "name": "freeCodeCamp PT",
-      "url": "https://www.freecodecamp.org/portuguese/news/rss/"
+      "name": "Canal Piloto",
+      "url": "https://canalpiloto.com.br/feed/"
     },
     {
-      "name": "Blog Alura",
-      "url": "https://www.alura.com.br/artigos/rss"
-    },
-    {
-      "name": "TabNews",
-      "url": "https://www.tabnews.com.br/rss"
+      "name": "Aeroflap",
+      "url": "https://www.aeroflap.com.br/feed/"
     }
   ],
   "keywords": [
-    "python", "sql", "programação", "tecnologia", "desenvolvimento", "ia", "dados", "carreira", "código", "banco de dados"
+    "piloto privado", "ppa", "anac", "aviacao", "teoria de voo", "meteorologia aeronautica", "navegacao aerea", "regulamentos de trafego aereo", "conhecimentos tecnicos", "aeroclube", "cma", "instrucao de voo", "decolagem", "pouso", "checklist", "voo solo", "metar", "vfr", "aeronave"
   ]
 }

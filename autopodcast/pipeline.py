@@ -30,7 +30,8 @@ def run_pipeline():
 
     # 2. Geração do roteiro
     print("\n[Etapa 2/4] Criando roteiro estruturado com IA...")
-    script_data = generate_script_with_ai(news)
+    next_ep_num = len(episodes) + 1
+    script_data = generate_script_with_ai(news, episode_num=next_ep_num)
     
     dummy_audio_url = f"{cfg['podcast'].get('link', 'http://localhost').rstrip('/')}/episodes/temp.mp3"
     new_ep = add_new_episode(

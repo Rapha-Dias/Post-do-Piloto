@@ -69,19 +69,25 @@ def fetch_tech_news(max_items: int = 4, exclude_links: list = None) -> list:
             
     # Fallback caso os feeds não retornem notícias suficientes
     if len(articles) < 2:
-        print("[!] Poucas notícias em tempo real. Adicionando tópicos essenciais de fallback.")
+        print("[!] Adicionando módulos essenciais do Curso Básico de Piloto Privado (PPA).")
         fallback_topics = [
             {
-                "title": "Fundamentos de Programação e Lógica para Iniciantes",
-                "link": "https://www.freecodecamp.org/portuguese/news/python-logica-iniciantes",
-                "summary": "Conceitos fundamentais de variáveis, estruturas condicionais e laços de repetição explicados com analogias do dia a dia.",
-                "source": f"{podcast_title} Educação"
+                "title": "Teoria de Voo e Aerodinâmica: As Quatro Forças (Sustentação, Arrasto, Tração e Peso)",
+                "link": "https://canalpiloto.com.br/guia-basico-ppa-parte-3-curso-teorico/",
+                "summary": "Estudo das forças aerodinâmicas em voo reto e nivelado, sustentação do aerofólio, perfis de asa e prevenindo o estol (stall).",
+                "source": "Canal Piloto - Curso PPA"
             },
             {
-                "title": "Bancos de Dados Relacionais e Consultas Essenciais: SELECT, WHERE e JOIN",
-                "link": "https://www.alura.com.br/artigos/sql-banco-de-dados-iniciantes",
-                "summary": "Guia prático para consultar tabelas, filtrar dados relevantes e realizar junções entre tabelas sem complicação.",
-                "source": f"{podcast_title} Dados"
+                "title": "Meteorologia Aeronáutica: Leitura de METAR, Altimetria (QNH) e Segurança VFR",
+                "link": "https://pt.scribd.com/document/974659764/Guia-Piloto-Privado-de-Aviao-Parte-2-Material-Didatico",
+                "summary": "Conceitos de pressão atmosférica, camadas da atmosfera, interpretação de informes meteorológicos METAR/TAF e identificação de nuvens perigosas.",
+                "source": "Material Didático PPA"
+            },
+            {
+                "title": "Instrução Prática de Voo: Inspeção Pré-Voo, Checklists e o Primeiro Voo Solo",
+                "link": "https://canalpiloto.com.br/guia-basico-ppa-parte-6-curso-pratico/",
+                "summary": "Passo a passo da rotina do aluno no aeroclube, inspeção de cabine e pré-voo, fraseologia de torre e o grande momento do voo solo.",
+                "source": "Instrução de Voo INVA"
             }
         ]
         for fb in fallback_topics:

@@ -45,8 +45,9 @@ def generate_rss_xml(episodes):
     ET.SubElement(channel, "title").text = podcast_title
     ET.SubElement(channel, "link").text = podcast_link
     ET.SubElement(channel, "description").text = podcast_desc
-    ET.SubElement(channel, "language").text = podcast_language
+    ET.SubElement(channel, "language").text = "pt-BR"
     
+    ET.SubElement(channel, "itunes:type").text = "episodic"
     ET.SubElement(channel, "itunes:author").text = podcast_author
     ET.SubElement(channel, "itunes:explicit").text = "no"
 
@@ -56,6 +57,12 @@ def generate_rss_xml(episodes):
 
     ET.SubElement(channel, "managingEditor").text = f"{podcast_email} ({podcast_author})"
     
+    # Imagem padrão RSS + itunes:image para compatibilidade total com Spotify
+    chan_img = ET.SubElement(channel, "image")
+    ET.SubElement(chan_img, "url").text = podcast_image
+    ET.SubElement(chan_img, "title").text = podcast_title
+    ET.SubElement(chan_img, "link").text = podcast_link
+
     image = ET.SubElement(channel, "itunes:image")
     image.set("href", podcast_image)
     
@@ -68,7 +75,11 @@ def generate_rss_xml(episodes):
         ET.SubElement(item, "description").text = ep.get("description", "")
         ET.SubElement(item, "itunes:summary").text = ep.get("summary", ep.get("title"))
         ET.SubElement(item, "itunes:explicit").text = "no"
-        ET.SubElement(item, "guid").text = ep.get("guid")
+        
+        guid_elem = ET.SubElement(item, "guid")
+        guid_elem.text = ep.get("guid")
+        guid_elem.set("isPermaLink", "false")
+        
         ET.SubElement(item, "pubDate").text = ep.get("pubDate")
         ET.SubElement(item, "itunes:duration").text = ep.get("duration", "00:20:00")
         

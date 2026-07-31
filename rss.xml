@@ -4,7 +4,8 @@
     <title>Curso Básico de Piloto Privado (PPA)</title>
     <link>https://rapha-dias.github.io/Post-do-Piloto</link>
     <description>O podcast diário automatizado com Inteligência Artificial e vozes neurais criado especialmente para ajudar pilotos iniciantes no curso de Piloto Privado (PPA) e entusiastas apaixonados pela aviação. Cada dia da semana aborda uma matéria essencial: Teoria de Voo, Meteorologia, Regulamentos, Conhecimentos Técnicos, Navegação, Manutenção (MMA) e Resumo da Semana com a Comandante Fernanda e seu aluno Cadu.</description>
-    <language>pt-br</language>
+    <language>pt-BR</language>
+    <itunes:type>episodic</itunes:type>
     <itunes:author>Cmte. Fernanda &amp; Aluno Cadu</itunes:author>
     <itunes:explicit>no</itunes:explicit>
     <itunes:owner>
@@ -12,6 +13,11 @@
       <itunes:email>contato@canalpiloto.com.br</itunes:email>
     </itunes:owner>
     <managingEditor>contato@canalpiloto.com.br (Cmte. Fernanda &amp; Aluno Cadu)</managingEditor>
+    <image>
+      <url>https://rapha-dias.github.io/Post-do-Piloto/cover.jpg</url>
+      <title>Curso Básico de Piloto Privado (PPA)</title>
+      <link>https://rapha-dias.github.io/Post-do-Piloto</link>
+    </image>
     <itunes:image href="https://rapha-dias.github.io/Post-do-Piloto/cover.jpg" />
     <itunes:category text="Education" />
     <item>
@@ -28,7 +34,7 @@ Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Ferna
 </description>
       <itunes:summary>Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Fernanda e o aluno Cadu abordam os tópicos essenciais de Conhecimentos Técnicos e realizam um Quiz da Banca ANAC com 3 perguntas explicadas passo a passo. Feito para pilotos iniciantes e entusiastas da aviação!</itunes:summary>
       <itunes:explicit>no</itunes:explicit>
-      <guid>podcast-ep004-20260731</guid>
+      <guid isPermaLink="false">podcast-ep004-20260731</guid>
       <pubDate>Fri, 31 Jul 2026 01:23:11 +0000</pubDate>
       <itunes:duration>00:06:21</itunes:duration>
       <enclosure url="https://rapha-dias.github.io/Post-do-Piloto/episodes/ep04_audio.mp3" length="2286432" type="audio/mpeg" />
@@ -47,7 +53,7 @@ Um guia completo e aprofundado sobre Regulamentos de Tráfego Aéreo para o alun
 </description>
       <itunes:summary>Um guia completo e aprofundado sobre Regulamentos de Tráfego Aéreo para o aluno de Piloto Privado (PPA). Abordamos as regras de voo visual (VFR), classificação dos espaços aéreos de A a G, entrada no circuito de tráfego, prioridades de passagem e fraseologia padrão de radiocomunicação, finalizando com um simulado da banca da ANAC.</itunes:summary>
       <itunes:explicit>no</itunes:explicit>
-      <guid>podcast-ep003-20260730</guid>
+      <guid isPermaLink="false">podcast-ep003-20260730</guid>
       <pubDate>Fri, 31 Jul 2026 01:19:55 +0000</pubDate>
       <itunes:duration>00:15:34</itunes:duration>
       <enclosure url="https://rapha-dias.github.io/Post-do-Piloto/episodes/ep03_audio.mp3" length="5607648" type="audio/mpeg" />
@@ -66,7 +72,7 @@ Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Ferna
 </description>
       <itunes:summary>Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Fernanda e o aluno Cadu abordam os tópicos essenciais de Meteorologia Aeronáutica e realizam um Quiz da Banca ANAC com 3 perguntas explicadas passo a passo. Feito para pilotos iniciantes e entusiastas da aviação!</itunes:summary>
       <itunes:explicit>no</itunes:explicit>
-      <guid>podcast-ep002-20260730</guid>
+      <guid isPermaLink="false">podcast-ep002-20260730</guid>
       <pubDate>Fri, 31 Jul 2026 01:17:09 +0000</pubDate>
       <itunes:duration>00:06:20</itunes:duration>
       <enclosure url="https://rapha-dias.github.io/Post-do-Piloto/episodes/ep02_audio.mp3" length="2282976" type="audio/mpeg" />
@@ -85,7 +91,7 @@ Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Ferna
 </description>
       <itunes:summary>Neste episódio completo do Curso Básico de Piloto Privado (PPA), a Cmte. Fernanda e o aluno Cadu abordam os tópicos essenciais de Aerodinâmica e Teoria de voo e realizam um Quiz da Banca ANAC com 3 perguntas explicadas passo a passo. Feito para pilotos iniciantes e entusiastas da aviação!</itunes:summary>
       <itunes:explicit>no</itunes:explicit>
-      <guid>podcast-ep001-20260730</guid>
+      <guid isPermaLink="false">podcast-ep001-20260730</guid>
       <pubDate>Fri, 31 Jul 2026 01:01:09 +0000</pubDate>
       <itunes:duration>00:06:15</itunes:duration>
       <enclosure url="https://rapha-dias.github.io/Post-do-Piloto/episodes/ep01_audio.mp3" length="2251872" type="audio/mpeg" />

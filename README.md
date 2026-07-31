@@ -3,11 +3,15 @@
 > **O podcast diário automatizado que ensina o conteúdo completo da banca da ANAC, inspeção de voo e manutenção aeronáutica para pilotos iniciantes e entusiastas da aviação!**  
 > Gerado 100% de forma automática via **Google Gemini AI**, **Microsoft Azure Neural TTS** e **GitHub Actions**.
 
+- **👨‍💻 Criador do Projeto:** [Raphael Dias](https://github.com/Rapha-Dias)
+- **🎧 Ouça no Spotify:** [Curso Básico de Piloto Privado (PPA) no Spotify](https://open.spotify.com/show/033YLFBFRFhv5bpJLlb6QT)
+- **🌐 Site Oficial:** [https://rapha-dias.github.io/Post-do-Piloto/](https://rapha-dias.github.io/Post-do-Piloto/)
+
 ---
 
 ## 🌟 Sobre o Projeto
 
-O **Curso Básico de Piloto Privado (PPA)** foi desenvolvido com o propósito de **ajudar alunos iniciantes no curso de Piloto Privado de Avião (PPA)** e **pessoas apaixonadas pela aviação civil**.
+O **Curso Básico de Piloto Privado (PPA)** foi concebido e criado por **Raphael Dias** com o propósito de **ajudar alunos iniciantes no curso de Piloto Privado de Avião (PPA)** e **pessoas apaixonadas pela aviação civil**.
 
 Diariamente às 07:00 AM (horário de Brasília), a Inteligência Artificial gera uma aula em áudio didática de 10 a 20 minutos, apresentada pela **Cmte. Fernanda (Instrutora INVA)** e seu aluno **Cadu**, com conversas explicativas de cockpit e um **Quiz da Banca ANAC com 3 perguntas práticas comentadas**.
 
@@ -47,10 +51,11 @@ Cada dia da semana aborda uma matéria essencial do currículo aeronáutico:
 
 ---
 
-## 📡 Como Ouvir e Assinar
+## 📡 Onde Ouvir e Assinar
 
-- 🌐 **Site Web Interativo com Player:** [https://rapha-dias.github.io/Post-do-Piloto/](https://rapha-dias.github.io/Post-do-Piloto/)
-- 📻 **Feed RSS 2.0 (Spotify / Apple Podcasts):** `https://rapha-dias.github.io/Post-do-Piloto/rss.xml`
+- 🎧 **Spotify Oficial:** [open.spotify.com/show/033YLFBFRFhv5bpJLlb6QT](https://open.spotify.com/show/033YLFBFRFhv5bpJLlb6QT)
+- 🌐 **Site Web Interativo:** [https://rapha-dias.github.io/Post-do-Piloto/](https://rapha-dias.github.io/Post-do-Piloto/)
+- 📻 **Feed RSS 2.0 (Para Spotify / Apple Podcasts):** `https://rapha-dias.github.io/Post-do-Piloto/rss.xml`
 - 📚 **Materiais de Apoio Recomendados:** [Canal Piloto - Downloads de Aviação](https://canalpiloto.com.br/materiais-para-estudo-de-aviacao-download/)
 
 ---
@@ -83,6 +88,14 @@ python test_all.py
 $env:GEMINI_API_KEY="sua_chave_do_gemini"
 python main.py
 ```
+
+---
+
+## 👤 Criador & Autor
+
+Desenvolvido por **Raphael Dias**  
+- **GitHub:** [@Rapha-Dias](https://github.com/Rapha-Dias)  
+- **E-mail:** `rdias@live.com`
 
 ---
 

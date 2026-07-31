@@ -16,7 +16,8 @@ def clean_text_for_speech(text: str) -> str:
     clean = re.sub(r'\[\d{1,2}:\d{2}\]', '', clean)
     clean = re.sub(r'\[[^\]]*\]|\{[^\}]*\}', '', clean)
     clean = re.sub(r'<[^>]+>', '', clean)
-    clean = re.sub(r'\([^\)]+\)', '', clean)
+    clean = re.sub(r'\(([A-Da-d])\)', r'\1)', clean)
+    clean = re.sub(r'\((?:risos|pausa|vinheta|música|musica|efeito|gargalhadas|suspiro)[^\)]*\)', '', clean, flags=re.IGNORECASE)
     clean = re.sub(r'[\*\`\_\#\~\>]', '', clean)
     clean = clean.replace("&quot;", '"').replace("&amp;", 'e').replace("&lt;", '').replace("&gt;", '')
     clean = clean.replace("&", "e")
@@ -70,6 +71,15 @@ def parse_sections(script_text: str):
         if not line:
             continue
             
+        # Section header check MUST come first before speaker matching (so bracketed titles with colons like [03:00] BLOCO 1: ... are not misidentified as speaker lines)
+        if line.startswith("[") and "]" in line:
+            if current_lines:
+                sections.append((current_title, current_lines))
+                current_lines = []
+            title_part = line.split("]", 1)[1].strip()
+            current_title = title_part if title_part else "Bloco"
+            continue
+
         speaker_match = re.match(r'^(?:\*\*|\*)?\s*([^:\*]+)\s*(?:\*\*|\*)?\s*:\s*(.*)', line)
         if speaker_match:
             raw_speaker = speaker_match.group(1).strip().lower()
@@ -82,12 +92,10 @@ def parse_sections(script_text: str):
                 else:
                     speaker_key = "host_1" # default
                 current_lines.append((speaker_key, text))
-        elif line.startswith("[") and "]" in line:
-            if current_lines:
-                sections.append((current_title, current_lines))
-                current_lines = []
-            title_part = line.split("]", 1)[1].strip()
-            current_title = title_part if title_part else "Bloco"
+        else:
+            # Continuation dialogue line (e.g., options A), B), C), D) or list items without explicit speaker prefix)
+            last_speaker = current_lines[-1][0] if current_lines else "host_1"
+            current_lines.append((last_speaker, line))
             
     if current_lines:
         sections.append((current_title, current_lines))
@@ -152,7 +160,7 @@ async def generate_audio_for_episode(ep):
     
     print(f"[OK] Áudio MP3 gerado com sucesso: {filepath} ({file_size} bytes, Duração: {duration_str})")
     
-    ep["audio_url"] = f"{podcast_link}/episodes/{filename}"
+    ep["audio_url"] = f"{podcast_link}/episodes/{filename}?v={file_size}"
     ep["audio_bytes"] = file_size
     ep["duration"] = duration_str
     ep["local_audio_path"] = filepath

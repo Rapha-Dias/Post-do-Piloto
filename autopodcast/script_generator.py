@@ -392,9 +392,13 @@ Retorne estritamente um objeto JSON com a seguinte estrutura:
     ])
 
     for q_idx, q_item in enumerate(quiz_items, 1):
+        opts_lines = [f"{h1_name}: {opt.strip()}" for opt in q_item['options'].split('\n') if opt.strip()]
         script_lines.extend([
             f"\n{h1_name}: Questão número {q_idx}: {q_item['q']}",
-            f"{h1_name}: Opções:\n{q_item['options']}",
+            f"{h1_name}: Opções:"
+        ])
+        script_lines.extend(opts_lines)
+        script_lines.extend([
             f"{h1_name}: Pensem um pouquinho... Três, dois, um... Comandante Fernanda, qual é a alternativa correta?",
             f"{h2_name}: A alternativa correta é a LETRA {q_item['answer']}! {q_item['exp']}",
             f"{h1_name}: Perfeito, Comandante! Muito clara essa explicação!"

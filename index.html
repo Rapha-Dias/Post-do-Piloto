@@ -629,7 +629,7 @@
 
         async function initApp() {
             try {
-                const configRes = await fetch('podcast_config.json');
+                const configRes = await fetch('podcast_config.json?v=' + new Date().getTime());
                 if (configRes.ok) {
                     const cfg = await configRes.json();
                     if (cfg.podcast) {
@@ -662,14 +662,15 @@
             } catch (err) {}
 
             try {
-                const res = await fetch('data/episodes.json');
+                const res = await fetch('data/episodes.json?v=' + new Date().getTime());
                 if (!res.ok) return;
                 allEpisodes = await res.json();
                 if (allEpisodes && allEpisodes.length > 0) {
                     loadEpisodeIntoPlayer(allEpisodes[0]);
-                    if (allEpisodes.length > 1) {
+                    const previousEpisodes = allEpisodes.slice(1, 4);
+                    if (previousEpisodes.length > 0) {
                         document.getElementById('history-card').style.display = 'block';
-                        document.getElementById('history-content').innerHTML = allEpisodes.slice(1).map((ep, idx) => `
+                        document.getElementById('history-content').innerHTML = previousEpisodes.map((ep, idx) => `
                             <div class="history-item">
                                 <div>
                                     <h4>${ep.title}</h4>

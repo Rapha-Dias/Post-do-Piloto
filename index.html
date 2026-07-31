@@ -450,10 +450,20 @@
                     💻 Repositório GitHub
                 </a>
             </div>
+
+            <!-- Seção do Badge Oficial do Spotify Podcast -->
+            <div style="text-align: center; margin-top: 35px; margin-bottom: 10px;">
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;">
+                    🎧 Ouça no Spotify &amp; Principais Agregadores
+                </p>
+                <a href="https://open.spotify.com/" id="spotify-link" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.06)';" onmouseout="this.style.transform='scale(1.00)';">
+                    <img src="spotify-podcast-badges/PNG/spotify-podcast-badge-blk-grn-330x80.png" alt="Listen on Spotify Podcast" style="height: 46px; border-radius: 8px; box-shadow: 0 6px 20px rgba(30, 215, 96, 0.25);">
+                </a>
+            </div>
         </main>
 
         <footer>
-            <p id="footer-text">© 2026 Meu Podcast • Desenvolvido com Python & GitHub Actions</p>
+            <p id="footer-text">© 2026 Meu Podcast • Desenvolvido com Python &amp; GitHub Actions</p>
         </footer>
     </div>
 
@@ -629,6 +639,7 @@
                         document.getElementById('header-description').innerText = cfg.podcast.description;
                         document.getElementById('footer-text').innerText = `© 2026 ${cfg.podcast.title} • Desenvolvido com Python & GitHub Actions`;
                         if (cfg.podcast.link) document.getElementById('repo-link').href = cfg.podcast.link;
+                        if (cfg.podcast.spotify_link) document.getElementById('spotify-link').href = cfg.podcast.spotify_link;
                     }
                     if (cfg.hosts) {
                         const grid = document.getElementById('hosts-grid');
